@@ -1,33 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Adicao from './components/Adicao'
+import Subtracao from './components/Subtracao'
+import PrecisoEstudar from './components/PrecisoEstudar'
+import Divisao from './components/Divisao'
+import Multiplicacao from './components/Multiplicacao'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>arthur {2+2}</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <PrecisoEstudar materia="React" />
+      <Adicao num1={10} num2={20} />
+      <Subtracao num1={20} num2={10} />
+      <Divisao num1={20} num2={10} />
+      <Multiplicacao num1={20} num2={10} />
     </>
   )
 }
